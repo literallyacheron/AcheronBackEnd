@@ -33,7 +33,6 @@ namespace AcheronBackEnd
             await url.WriteJsonAsync(clientFactory, payload);
             string result = await url.ReadAsync(clientFactory);
             Console.WriteLine(result);
-            Console.ReadKey();
         }
     }
     public static class HttpClientExtensions
