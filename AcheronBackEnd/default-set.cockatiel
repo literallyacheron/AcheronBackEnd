@@ -1,0 +1,4 @@
+REF{ imp cypho.cockatiel }URI(uri.cyphdep)
+SET{ gen-cmd:t; }
+iEN(cmd01.cypdeph){ char:user; pos; tb; }
+TMP{ 1n; 2n; 3n; 4n; 5n; }
