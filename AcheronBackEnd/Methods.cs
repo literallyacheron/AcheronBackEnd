@@ -57,12 +57,11 @@ namespace AcheronBackEnd
             {
                 var client = clientFactory.CreateClient();
 
-                // Use a variable name other than 'response' to avoid confusion
+                // dont use response as a name again memo
                 using var httpResponse = await client.GetAsync(url);
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
-                    // Explicitly read the body content stream as a string
                     string fileContent = await httpResponse.Content.ReadAsStringAsync();
                     return fileContent;
                 }
