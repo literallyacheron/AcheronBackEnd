@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/literallyacheron-backend/AcheronBackEnd', '-f', 'AcheronBackEnd/Dockerfile', '.']
+  args: ['build', '-t', 'gcr.io/literallyacheron-backend/AcheronBackEnd', '-f', 'AcheronBackEnd/AcheronBackEnd/Dockerfile', '.']
 images:
   - 'gcr.io/$PROJECT_ID/acheronbackend'
 options:
