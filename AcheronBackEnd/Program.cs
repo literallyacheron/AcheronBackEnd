@@ -17,22 +17,20 @@ namespace AcheronBackEnd
                 await waitForInput();
             }
             var builder = WebApplication.CreateBuilder(args);
-
-            // 1. Retrieve the PORT environment variable provided by Cloud Run (defaults to 8080)
             var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 
-            // 2. Bind the app to listen on all network interfaces (0.0.0.0) on that port
+            
             var url = $"http://0.0.0.0:{port}";
             builder.WebHost.UseUrls(url);
 
             var app = builder.Build();
 
-            // 3. Define your HTTP endpoints
+            
             app.MapGet("/", () => "Hello from C# on Google Cloud Run!");
 
             app.MapPost("/api/data", async (HttpContext context) =>
             {
-                // Handle incoming HTTP POST requests here
+                
                 return Results.Ok(new { message = "Data received successfully!" });
             });
 
